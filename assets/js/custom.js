@@ -1,151 +1,179 @@
-jQuery( document ).ready(function( $ ) {
+jQuery(document).ready(function ($) {
+  "use strict";
 
+  $(function () {
+    $("#tabs").tabs();
+  });
 
-	"use strict";
+  // Page loading animation
 
+  $("#preloader").animate(
+    {
+      opacity: "0",
+    },
+    600,
+    function () {
+      setTimeout(function () {
+        $("#preloader").css("visibility", "hidden").fadeOut();
+      }, 300);
+    }
+  );
 
-    
-        $(function() {
-            $( "#tabs" ).tabs();
-        });
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    var box = $(".header-text").height();
+    var header = $("header").height();
 
+    if (scroll >= box - header) {
+      $("header").addClass("background-header");
+    } else {
+      $("header").removeClass("background-header");
+    }
+  });
+  if ($(".owl-testimonials").length) {
+    $(".owl-testimonials").owlCarousel({
+      loop: true,
+      nav: false,
+      dots: true,
+      items: 1,
+      margin: 30,
+      autoplay: false,
+      smartSpeed: 700,
+      autoplayTimeout: 6000,
+      responsive: {
+        0: {
+          items: 1,
+          margin: 0,
+        },
+        460: {
+          items: 1,
+          margin: 0,
+        },
+        576: {
+          items: 2,
+          margin: 20,
+        },
+        992: {
+          items: 2,
+          margin: 30,
+        },
+      },
+    });
+  }
+  if ($(".owl-partners").length) {
+    $(".owl-partners").owlCarousel({
+      loop: true,
+      nav: false,
+      dots: true,
+      items: 1,
+      margin: 30,
+      autoplay: false,
+      smartSpeed: 700,
+      autoplayTimeout: 6000,
+      responsive: {
+        0: {
+          items: 1,
+          margin: 0,
+        },
+        460: {
+          items: 1,
+          margin: 0,
+        },
+        576: {
+          items: 2,
+          margin: 20,
+        },
+        992: {
+          items: 4,
+          margin: 30,
+        },
+      },
+    });
+  }
 
-        // Page loading animation
+  $(".Modern-Slider").slick({
+    autoplay: true,
+    autoplaySpeed: 10000,
+    speed: 600,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    pauseOnHover: false,
+    dots: true,
+    pauseOnDotsHover: true,
+    cssEase: "linear",
+    // fade:true,
+    draggable: false,
+    prevArrow: '<button class="PrevArrow"></button>',
+    nextArrow: '<button class="NextArrow"></button>',
+  });
 
-        $("#preloader").animate({
-            'opacity': '0'
-        }, 600, function(){
-            setTimeout(function(){
-                $("#preloader").css("visibility", "hidden").fadeOut();
-            }, 300);
-        });       
+  function visible(partial) {
+    var $t = partial,
+      $w = jQuery(window),
+      viewTop = $w.scrollTop(),
+      viewBottom = viewTop + $w.height(),
+      _top = $t.offset().top,
+      _bottom = _top + $t.height(),
+      compareTop = partial === true ? _bottom : _top,
+      compareBottom = partial === true ? _top : _bottom;
 
-        $(window).scroll(function() {
-          var scroll = $(window).scrollTop();
-          var box = $('.header-text').height();
-          var header = $('header').height();
+    return (
+      compareBottom <= viewBottom && compareTop >= viewTop && $t.is(":visible")
+    );
+  }
 
-          if (scroll >= box - header) {
-            $("header").addClass("background-header");
-          } else {
-            $("header").removeClass("background-header");
-          }
-        });
-		if ($('.owl-testimonials').length) {
-            $('.owl-testimonials').owlCarousel({
-                loop: true,
-                nav: false,
-                dots: true,
-                items: 1,
-                margin: 30,
-                autoplay: false,
-                smartSpeed: 700,
-                autoplayTimeout: 6000,
-                responsive: {
-                    0: {
-                        items: 1,
-                        margin: 0
-                    },
-                    460: {
-                        items: 1,
-                        margin: 0
-                    },
-                    576: {
-                        items: 2,
-                        margin: 20
-                    },
-                    992: {
-                        items: 2,
-                        margin: 30
-                    }
-                }
-            });
-        }
-        if ($('.owl-partners').length) {
-            $('.owl-partners').owlCarousel({
-                loop: true,
-                nav: false,
-                dots: true,
-                items: 1,
-                margin: 30,
-                autoplay: false,
-                smartSpeed: 700,
-                autoplayTimeout: 6000,
-                responsive: {
-                    0: {
-                        items: 1,
-                        margin: 0
-                    },
-                    460: {
-                        items: 1,
-                        margin: 0
-                    },
-                    576: {
-                        items: 2,
-                        margin: 20
-                    },
-                    992: {
-                        items: 4,
-                        margin: 30
-                    }
-                }
-            });
-        }
-
-        $(".Modern-Slider").slick({
-            autoplay:true,
-            autoplaySpeed:10000,
-            speed:600,
-            slidesToShow:1,
-            slidesToScroll:1,
-            pauseOnHover:false,
-            dots:true,
-            pauseOnDotsHover:true,
-            cssEase:'linear',
-           // fade:true,
-            draggable:false,
-            prevArrow:'<button class="PrevArrow"></button>',
-            nextArrow:'<button class="NextArrow"></button>', 
-        });
-
-        function visible(partial) {
-            var $t = partial,
-                $w = jQuery(window),
-                viewTop = $w.scrollTop(),
-                viewBottom = viewTop + $w.height(),
-                _top = $t.offset().top,
-                _bottom = _top + $t.height(),
-                compareTop = partial === true ? _bottom : _top,
-                compareBottom = partial === true ? _top : _bottom;
-
-            return ((compareBottom <= viewBottom) && (compareTop >= viewTop) && $t.is(':visible'));
-
-        }
-
-        $(window).scroll(function(){
-
-          if(visible($('.count-digit')))
+  $(window).scroll(function () {
+    if (visible($(".count-digit"))) {
+      if ($(".count-digit").hasClass("counter-loaded")) return;
+      $(".count-digit").addClass("counter-loaded");
+      $(".count-digit").each(function () {
+        var $this = $(this);
+        var text = $this.text();
+        var hasPlus = text.includes("+");
+        var isSpecialFormat = text === "24/7"; // Dodano za 24/7 format
+        
+        if (isSpecialFormat) {
+          // Posebno rukovanje za 24/7
+          jQuery({ Counter: 0 }).animate(
+            { Counter: 24 },
             {
-              if($('.count-digit').hasClass('counter-loaded')) return;
-              $('.count-digit').addClass('counter-loaded');
-              
-        $('.count-digit').each(function () {
-          var $this = $(this);
-          var text = $this.text();
-          
-          if (/^\d+$/.test(text)) {
-            jQuery({ Counter: 0 }).animate({ Counter: text }, {
               duration: 1200,
-              easing: 'swing',
+              easing: "swing",
               step: function () {
-                $this.text(Math.ceil(this.Counter));
+                var currentValue = Math.ceil(this.Counter);
+                $this.text(currentValue + "/7");
+              },
+              complete: function () {
+                $this.text("24/7");
+              },
+            }
+          );
+        } else {
+          // Postojeći kod za brojeve i brojeve sa +
+          var cleanNumber = text.replace(/[^\d]/g, ""); // Uklanja sve što nije broj
+
+          if (/^\d+/.test(cleanNumber) && cleanNumber !== "") {
+            jQuery({ Counter: 0 }).animate(
+              { Counter: cleanNumber },
+              {
+                duration: 1200,
+                easing: "swing",
+                step: function () {
+                  var currentValue = Math.ceil(this.Counter);
+                  // Dodaje + na kraju ako je originalno imao +
+                  $this.text(hasPlus ? currentValue + "+" : currentValue);
+                },
+                complete: function () {
+                  // Osigurava da finalna vrednost bude tačna
+                  $this.text(hasPlus ? cleanNumber + "+" : cleanNumber);
+                },
               }
-            });
+            );
           } else {
             $this.text(text);
           }
-        });
         }
-    })
- 
+      });
+    }
+  });
 });
