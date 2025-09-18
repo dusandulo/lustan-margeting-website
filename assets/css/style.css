@@ -508,6 +508,11 @@ ul.slick-dots {
 	color: #FFF !important;
 	overflow: hidden;
 	animation: fadeOutLeft 1s both;
+			text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
 }
 
 .Modern-Slider .item h2 {
@@ -519,6 +524,11 @@ ul.slick-dots {
 	color: #FFF !important;
 	overflow: hidden;
 	animation: fadeOutLeft 1s both;
+				text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
 }
 
 .Modern-Slider .item p {
@@ -528,6 +538,11 @@ ul.slick-dots {
 	font-weight: 400;
 	line-height: 30px;
 	margin-bottom: 40px;
+				text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
 }
 
 .Modern-Slider .item a {
