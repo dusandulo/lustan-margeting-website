@@ -322,7 +322,7 @@ header .navbar {
 
 .navbar .navbar-nav a.nav-link {
 	text-transform: capitalize;
-	font-size: 15px;
+	font-size: 16px;
 	font-weight: 300;
 	letter-spacing: 0.5px;
 	color: #fff;
@@ -508,11 +508,6 @@ ul.slick-dots {
 	color: #FFF !important;
 	overflow: hidden;
 	animation: fadeOutLeft 1s both;
-			text-shadow:
-    -1px -1px 0 black,
-     1px -1px 0 black,
-    -1px  1px 0 black,
-     1px  1px 0 black;
 }
 
 .Modern-Slider .item h2 {
@@ -524,11 +519,6 @@ ul.slick-dots {
 	color: #FFF !important;
 	overflow: hidden;
 	animation: fadeOutLeft 1s both;
-				text-shadow:
-    -1px -1px 0 black,
-     1px -1px 0 black,
-    -1px  1px 0 black,
-     1px  1px 0 black;
 }
 
 .Modern-Slider .item p {
@@ -538,11 +528,6 @@ ul.slick-dots {
 	font-weight: 400;
 	line-height: 30px;
 	margin-bottom: 40px;
-				text-shadow:
-    -1px -1px 0 black,
-     1px -1px 0 black,
-    -1px  1px 0 black,
-     1px  1px 0 black;
 }
 
 .Modern-Slider .item a {
