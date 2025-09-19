@@ -61,6 +61,9 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   </head>
 
   <body>
@@ -195,99 +198,34 @@
     </div>
 
     <!-- Services Section -->
-
     <div class="services" id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <h2>Naše <em>usluge</em></h2>
-              <span style="color: #fff">Kompletan pristup digitalnom marketingu</span>
-            </div>
-          </div>
-
-          <div class="col-lg-6 col-md-6 col-sm-12">
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="fa fa-laptop"></i>
-              </div>
-              <div class="service-content">
-                <h4>Unapređujemo Vaše prisustvo na internetu</h4>
-                <p>
-                  Pravimo moderne, brze i optimizovane sajtove sa unikatnim
-                  dizajnom. Naš fokus je na funkcionalnosti, estetici i
-                  poslovnim rezultatima.
-                </p>
-                <div class="service-features">
-                  <span class="feature-tag">Izrada websajta</span>
-                  <span class="feature-tag">Redizajn websajta</span>
-                  <span class="feature-tag">Održavanje websajta</span>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>Naše <em>usluge</em></h2>
+                        <span style="color: #fff;">Kompletan pristup digitalnom marketingu</span>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 col-md-6 col-sm-12">
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="fa fa-share-alt"></i>
-              </div>
-              <div class="service-content">
-                <h4>Podižemo Vašu poziciju na društvenim mrežama</h4>
-                <p>
-                  Gradimo i jačamo Vaš brend na društvenim mrežama kreiranjem
-                  modernog, vizuelno atraktivnog i angažovanog sadržaja.
-                </p>
-                <div class="service-features">
-                  <span class="feature-tag">Fotografisanje sadržaja</span>
-                  <span class="feature-tag">Kreiranje reklama</span>
-                  <span class="feature-tag">Content strategija</span>
+                
+                <div class="col-md-12">
+                    <div class="carousel-container">
+                        <div class="carousel" id="serviceCarousel">
+                            <!-- Dynamic cards -->
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-nav">
+                        <button id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                        <button id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    
+                    <div class="carousel-indicators" id="indicators">
+                        <!-- Dynamic indicators -->
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-
-          <div class="col-lg-6 col-md-6 col-sm-12">
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="fa fa-search"></i>
-              </div>
-              <div class="service-content">
-                <h4>Pomažemo Vam da prestignete konkurenciju na Google-u</h4>
-                <p>
-                  SEO je kičma digitalnog marketinga. Naš tim koristi alate i
-                  strategije koji pomažu da budete među prvima na Google-u.
-                </p>
-                <div class="service-features">
-                  <span class="feature-tag">Analiza sajta</span>
-                  <span class="feature-tag">Praćenje konkurencije</span>
-                  <span class="feature-tag">SEO optimizacija</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 col-md-6 col-sm-12">
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="fa fa-code"></i>
-              </div>
-              <div class="service-content">
-                <h4>Kreiramo web aplikacije po Vašoj meri</h4>
-                <p>
-                  Od ideje do finalnog proizvoda, izrađujemo web aplikacije
-                  koje odgovaraju specifičnim potrebama Vašeg poslovanja i korisnika. Fokusiramo se na intuitivno korisničko iskustvo i funkcionalnosti koje donose vrednost.
-                </p>
-                <div class="service-features">
-                  <span class="feature-tag">Konsultacije</span>
-                  <span class="feature-tag">Strategija implementacije</span>
-                  <span class="feature-tag">Razvoj web aplikacije</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
 
     <div class="fun-facts">
@@ -353,8 +291,8 @@
           </div>
           <div class="col-lg-6 align-self-center">
             <div class="right-content">
-              <span style="color: #fff;">O nama</span>
-              <h2 style="color: #fff;">Simply <em>different</em></h2>
+              <span style="color: #fff">O nama</span>
+              <h2 style="color: #fff">Simply <em>different</em></h2>
 
               <div class="about-text">
                 <p>
@@ -377,7 +315,7 @@
               <div class="about-highlight">
                 <div class="highlight-content">
                   <i class="fa fa-quote-left"></i>
-                  <h4 style="color: #fff;">
+                  <h4 style="color: #fff">
                     "Vaša podrška u digitalnoj transformaciji - od ideje do
                     rezultata. Lustan Marketing"
                   </h4>
@@ -459,21 +397,15 @@
                         <option value="">
                           Izaberite uslugu koja Vas zanima
                         </option>
-                        <option value="web-sajt">
-                          Izrada web sajta
-                        </option>
+                        <option value="web-sajt">Izrada web sajta</option>
                         <option value="social-media">
                           Social media management
                         </option>
                         <option value="web-aplikacije">
                           Izrada web aplikacije
                         </option>
-                        <option value="seo">
-                          SEO optimizacija
-                        </option>
-                        <option value="konsultacije">
-                          Konsultacije
-                        </option>
+                        <option value="seo">SEO optimizacija</option>
+                        <option value="konsultacije">Konsultacije</option>
                       </select>
                     </fieldset>
                   </div>
@@ -716,6 +648,9 @@
     <script src="assets/js/owl.js"></script>
     <script src="assets/js/slick.js"></script>
     <script src="assets/js/accordions.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
       $(function () {
         // Single Page Nav
