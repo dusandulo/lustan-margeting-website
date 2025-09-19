@@ -84,7 +84,7 @@ a.border-button:hover {
 .section-heading h2 {
 	font-size: 36px;
 	font-weight: 600;
-	color: #1e1e1e;
+	color: #fff;
 }
 
 .section-heading em {
@@ -345,14 +345,20 @@ header .navbar {
 }
 
 .navbar .navbar-toggler {
-	border-color: #fff;
-	background-color: #fff;
+	border: none;
+	background-color: transparent;
 	height: 36px;
 	outline: none;
 	border-radius: 0px;
 	position: absolute;
 	right: 30px;
 	top: 20px;
+	padding: 0;
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: none; 
+    outline: none;
 }
 
 .navbar .navbar-toggler-icon:after {
@@ -1006,7 +1012,7 @@ ul.slick-dots {
 
 .partners {
 	margin-top: 140px;
-	background-color: #f7f7f7;
+	background-color: #2d2b2b;
 	padding: 60px 0px;
 }
 
@@ -1537,7 +1543,7 @@ footer ul.menu-list li a:hover::before {
 		left: 0;
 		width: 100%;
 		text-align: center;
-		background-color: #fff;
+		background-color: #2d2b2b;
 		box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
 	}
 
@@ -1551,7 +1557,7 @@ footer ul.menu-list li a:hover::before {
 
 	.navbar .navbar-nav a.nav-link {
 		padding: 15px 0px;
-		color: #1e1e1e !important;
+		color: #fff !important;
 	}
 
 	.navbar .navbar-nav .nav-link:hover,
@@ -1880,11 +1886,11 @@ footer ul.menu-list li a:hover::before {
   margin-bottom: 25px;
   font-size: 15px;
   line-height: 1.8;
-  color: #666;
+  color: #fff;
 }
 
 .about-highlight {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: rgba(248, 249, 250, 0.2);
   border-left: 5px solid #86bc24;
   border-radius: 10px;
   padding: 30px;
@@ -1992,7 +1998,7 @@ footer ul.menu-list li a:hover::before {
 }
 
 .callback-form .contact-form {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: rgba(248, 249, 250, 0.2);
   padding: 60px;
   border-radius: 15px;
   text-align: center;
@@ -2012,11 +2018,11 @@ footer ul.menu-list li a:hover::before {
 }
 
 .callback-form .section-heading h2 {
-  color: #1e1e1e;
+  color: #fff;
 }
 
 .callback-form .section-heading span {
-  color: #666;
+  color: #fff;
 }
 
 .callback-form .contact-form input,
@@ -2118,7 +2124,7 @@ footer ul.menu-list li a:hover::before {
   align-items: center;
   gap: 20px;
   padding: 25px;
-  background: #fff;
+  background: rgba(248, 249, 250, 0.5);
   border-radius: 15px;
   margin-bottom: 30px;
   transition: all 0.3s ease;
